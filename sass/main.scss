@@ -1,0 +1,73 @@
+@import "base/base.scss";
+@import "base/variables.scss";
+@import "./base/animations.scss";
+@import "./base/typograhpy.scss";
+@import "./base/buttons.scss";
+@import "./base/home.scss";
+@import "base/utility.scss";
+@import "base/grid.scss";
+@import "base/card.scss";
+@import "base/story.scss";
+@import "base/bgvideo.scss";
+// @import "./base/composition.scss";
+@import "base/composition.scss";
+@import "base/featur-box.scss";
+@import "base/form.scss";
+@import "base/footer.scss";
+@import "base/navigation.scss";
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right top, rgba($color-primary-light, 0.8),rgba($color-primary-dark, 0.8)),url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top; /*//top size remains fixed while bottom keeps decreasing */
+    /* clip-path: (x y,x y,x y,x y);  4 coordinates */
+    /* clip-path:polygon(0 0,100% 0,100% 100% ,100% 75%); */
+    clip-path: polygon(100% 80vh, 100% 0, 0 0, 0 99%);
+    position: relative;
+
+    
+}
+.logo-box{
+    position: absolute;
+    top:40.1px;
+    left:40px;
+}
+ .logo{
+    height: 35px;  
+} 
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* background-color:black; */
+    transform: translate(-40%,-50%);
+    text-align: center;
+}
+.heading-primary-main{
+    font-size:64px;
+    font-weight:400;
+    letter-spacing:35px;
+    display: block;
+    color:#fff;
+    text-transform: uppercase;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    /* 
+    animation-delay;
+    animation-iteration-count;
+    */
+}
+.heading-primary-sub{
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:19px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    display: block;
+    color:#fff;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+

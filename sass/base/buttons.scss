@@ -1,0 +1,107 @@
+
+.btn{
+    &,
+    &:link,
+    &:visited{
+        text-transform:uppercase;
+        text-decoration: none;
+        /* text-transform: none; */
+        padding: 20px 40px;
+        display:inline-block;
+        transition: all 0.3s;
+        border-radius: 100px;
+        position: relative;
+        animation: moveInBottom ;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+        animation-delay: .3s;
+        animation-fill-mode: backwards;
+        color:#2a28287a;
+        border:none;
+        cursor:pointer;
+    
+    
+    }
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    
+    &:active{
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        /* background-color: black; */
+    }
+    
+    &-white{
+        background-color: #fff;
+        color:$color-grey-dark;
+    }
+    &--green{
+        background-color: $color-primary;
+        color:$color-grey-dark;
+    }
+
+    
+    &::after
+    {
+        content:"";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius:100px;
+        position: absolute;
+        top: 0;left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    &-white::after{
+        background-color:#ffff;
+    }
+    
+    &:hover:after{
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+    &--green::after{
+        background-color:#ffff;
+    }
+    
+    &:hover:after{
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+    }
+
+.btn-text{
+    &:link,&:visited{
+        font-size: 1.6rem;
+        color:$color-primary;
+        display:inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        transition: all .2s
+    }
+    &:hover{
+        background-color: $color-primary-dark;
+        color:$color-white;
+        box-shadow:0 1rem 2rem rgba($color-black-dark,.15);
+        transform:translateY(-2px);
+    }
+    &:active{
+        box-shadow: 0 0.3 2rem rgba($color-black-dark,.70);
+        transform:translateY(0px);
+
+    }
+}
+    
+
+.btn-green{
+    background-color: #fff;
+    color:$color-primary-dark;
+    border-top:2px solid rgba(220, 172, 172, 0.448);
+    border-left:2px solid rgb(226, 107, 107);
+    border-right:2px solid rgb(226, 107, 107);
+}
